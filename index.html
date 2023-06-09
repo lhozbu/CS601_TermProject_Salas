@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Title</title>
+    <link href="css/default.css" rel="stylesheet">
+</head>
+<body>
+<div class="container stretch">
+    <div class="column align-center">
+        <text-glitch init-element="h1"
+                     init-text="Welcome">
+        </text-glitch>
+        <text-glitch init-element="p"
+                     init-frames-per-second="60"
+                     init-text="My name is Luis Salas and this is my website.">
+        </text-glitch>
+        <text-glitch init-element="p"
+                     init-frames-per-second="60"
+                     init-text="Go ahead and click any of the sections to explore it and know more about me.">
+        </text-glitch>
+    </div>
+</div>
+<div class="container margin-top-10 margin-bottom-10">
+    <div class="container stretch">
+        <div class="column">
+            <image-nav></image-nav>
+        </div>
+    </div>
+</div>
+<script src="js/vue.min.js"></script>
+<script src="js/components/background-animation.js" type="module"></script>
+<script src="js/components/text-glitch.js" type="module"></script>
+<script src="js/components/image-nav.js" type="module"></script>
+</body>
+</html>
