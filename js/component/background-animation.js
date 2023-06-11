@@ -1,10 +1,10 @@
-import * as Utils from '../utils.js';
+import * as Utils from '../lib/utils.js';
 
 /**
  * Background electron animation<br />
  * Creates on pure JavaScript without vue because canvas doesn't like to update on vue
  */
-class BackgroundAnimation {
+export class BackgroundAnimation {
     #canvas = null;
     #width = 0;
     #height = 0;
@@ -39,6 +39,18 @@ class BackgroundAnimation {
     #collisions = [];
 
     /**
+     * Constructor
+     * @param config
+     */
+    constructor(config) {
+        config = config || {};
+        this.#config = Utils.jsonExtend(this.#config, config);
+
+        this.#drawCanvas();
+        window.addEventListener("resize", () => this.#resize());
+    }
+
+    /**
      *
      * @param color
      */
@@ -46,14 +58,6 @@ class BackgroundAnimation {
         this.#config.electron.color = color;
         this.#config.collision.electron.color = color;
         this.#config.collision.wall.color = color;
-    }
-
-    /**
-     *
-     */
-    constructor() {
-        this.#drawCanvas();
-        window.addEventListener("resize", () => this.#resize());
     }
 
     /**
@@ -276,5 +280,3 @@ class BackgroundAnimation {
     }
 }
 
-export const animation = new BackgroundAnimation();
-Utils.onDocumentReady(() => animation.start());

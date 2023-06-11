@@ -7,23 +7,8 @@
     <link href="css/default.css" rel="stylesheet">
 </head>
 <body>
-<div class="container background-blue-300 margin-bottom-10">
-    <div class="column">
-        <div class="container stretch padding-top-10 padding-bottom-10">
-            <div class="column">
-                <text-glitch init-element="span"
-                             init-frames-per-second="60"
-                             init-text="CS601 - Web Application Development">
-            </div>
-            <div class="column align-right">
-                <a href="sms:+1(603)8242671">Phone: +1(603) 824 2671</a> |
-                <a href="mail:lhoz@bu.edu">Email: lhoz@bu.edu</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container stretch">
+<site-header></site-header>
+<main class="container stretch">
     <div class="column align-center">
         <text-glitch init-element="h1"
                      init-text="Welcome">
@@ -38,10 +23,11 @@
         </text-glitch>
         <image-nav class="margin-top-10 margin-bottom-10"></image-nav>
     </div>
-</div>
-<script src="js/vue.min.js"></script>
-<script src="js/components/background-animation.js" type="module"></script>
-<script src="js/components/text-glitch.js" type="module"></script>
-<script src="js/components/image-nav.js" type="module"></script>
+</main>
+<script src="js/lib/vue.min.js"></script>
+<script src="js/component/site-header.js"></script>
+<script src="js/component/text-glitch.js" type="module"></script>
+<script src="js/component/image-nav.js" type="module"></script>
+<script src="js/page/index.js" type="module"></script>
 </body>
 </html>

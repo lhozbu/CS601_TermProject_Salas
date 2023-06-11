@@ -1,4 +1,4 @@
-import * as Background from "./background-animation.js";
+import * as Background from "../page/index.js";
 
 /**
  * Image navigation component
