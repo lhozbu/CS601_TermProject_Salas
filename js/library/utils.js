@@ -11,6 +11,18 @@ export const onDocumentReady = ((func) => {
 });
 
 /**
+ * Request animation frames
+ * @type {animationFrame}
+ */
+export const animationFrame = ((start, end, fps, func, ...params) => {
+    if ((end - start) > Math.floor(1000 / fps)) {
+        requestAnimationFrame(() => func(...params));
+    } else {
+        setTimeout(() => requestAnimationFrame(() => func(...params)), Math.floor(1000 / fps) - (end - start));
+    }
+});
+
+/**
  * Clones the given JSON
  * @type {function(*=): any}
  */

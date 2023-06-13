@@ -1,4 +1,4 @@
-import * as Background from "../page/index.js";
+import * as Vue from "../library/vue.esm-browser.prod.js";
 
 /**
  * Image navigation component
@@ -6,15 +6,16 @@ import * as Background from "../page/index.js";
 const ImageNav = Vue.defineCustomElement({
     // language=HTML
     template: `
-        <div class="container image-nav">
+        <div class="row stretch margin-y-20 image-nav">
             <div class="column" v-for="(item, index) in items" :data-color="item.color">
-                <div class="container-image">
+                <figure>
                     <img :src="item.image">
-                </div>
-                <span @click="activate($event)">{{item.text}}</span>
+                    <figcaption>{{item.text}}</figcaption>
+                </figure>
             </div>
         </div>
     `,
+
     // language=CSS
     styles: [
             `
@@ -22,41 +23,45 @@ const ImageNav = Vue.defineCustomElement({
             @import 'css/image-nav.css';
         `
     ],
+
+    /**
+     * Data of the component
+     */
     data() {
         return {
             items: [
                 {
-                    image: "img/components/image-nav/about-me.jpg",
+                    image: "img/image-nav/about-me.jpg",
                     text: "About me",
                     color: "#4894C5",
                     href: "https://www.google.com"
                 },
                 {
-                    image: "img/components/image-nav/education.jpg",
+                    image: "img/image-nav/education.jpg",
                     text: "Education",
                     color: "#ff4a4a",
                     href: "https://www.google.com"
                 },
                 {
-                    image: "img/components/image-nav/experience.jpg",
+                    image: "img/image-nav/experience.jpg",
                     text: "Experience",
                     color: "#ff571d",
                     href: "https://www.google.com"
                 },
                 {
-                    image: "img/components/image-nav/family.jpg",
+                    image: "img/image-nav/family.jpg",
                     text: "Family",
                     color: "#4aff41",
                     href: "https://www.google.com"
                 },
                 {
-                    image: "img/components/image-nav/videogames.jpg",
+                    image: "img/image-nav/videogames.jpg",
                     text: "Videogames",
                     color: "#ea69ff",
                     href: "https://www.google.com"
                 },
                 {
-                    image: "img/components/image-nav/cars.jpg",
+                    image: "img/image-nav/cars.jpg",
                     text: "Cars",
                     color: "#fafa00",
                     href: "https://www.google.com"
@@ -64,50 +69,6 @@ const ImageNav = Vue.defineCustomElement({
             ],
             active: null
         };
-    },
-    methods: {
-        /**
-         * Activates the active image<br />
-         * The second click will open the page
-         * @param event
-         */
-        activate: function (event) {
-            // Obtains the column to be activated
-            const column = event.target.parentNode;
-
-            // Checks if it requires to close
-            if (this.active !== null && this.active === column) {
-                this.close(column);
-                this.active = null;
-                Background.animation.color = "#000000";
-            } else if (this.active !== null) {
-                this.close(this.active);
-                this.open(column);
-                this.active = column;
-            } else {
-                this.open(column);
-                this.active = column;
-            }
-        },
-        /**
-         * Opens the indicated column
-         * @param column
-         */
-        open: function (column) {
-            column.classList.add("active");
-            Background.animation.color = column.dataset.color;
-        },
-        /**
-         * Closes the indicated column
-         * @param column
-         */
-        close: function (column) {
-            column.classList.remove("active");
-            column.classList.add("inactive");
-            setTimeout(() => {
-                column.classList.remove("inactive");
-            }, 1000);
-        }
     }
 });
 customElements.define("image-nav", ImageNav);

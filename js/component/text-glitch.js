@@ -1,17 +1,24 @@
+import * as Vue from "../library/vue.esm-browser.prod.js";
+import * as Utils from "../library/utils.js";
+
 /**
  * Animates text like is glitching
  */
 const TextGlitch = Vue.defineCustomElement({
     // language=HTML
     template: `
-        <component :is="element" :class="css">{{text}}</component>
+        <component :is="type" :class="css">{{text}}</component>
     `,
     // language=CSS
     styles: [`
         @import 'css/default.css';
     `],
+
+    /**
+     * Initialization properties
+     */
     props: {
-        initElement: {
+        initType: {
             default: "h1"
         },
         initText: {
@@ -20,65 +27,75 @@ const TextGlitch = Vue.defineCustomElement({
         initCss: {
             default: ""
         },
-        initCharacters: {
-            default: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-        },
-        initFramesPerSecond: {
+        initFps: {
             default: 15
-        },
-        initAnimationFrames: {
-            default: 10
         }
     },
+
+    /**
+     * Component data
+     */
     data() {
         return {
-            element: this.initElement,
+            type: this.initType,
             text: this.initText,
             css: this.initCss,
-            characters: this.initCharacters,
-            framesPerSecond: this.initFramesPerSecond,
-            animationFrames: this.initAnimationFrames
+            fps: this.initFps,
+
+            characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+            scramble: 10
         };
     },
+
+    /**
+     * Component methods
+     */
     methods: {
         /**
          * Animates the text as a glitch
          */
         animate: function () {
-            this.glitchTextAnimation().then(() => this.restoreTextAnimation());
+            this.glitchText() //
+                .then(() => this.restoreText(0));
         },
 
         /**
-         * Restores the text
+         * Animation that restores the text
+         * @param position
          */
-        restoreTextAnimation: function () {
-            let position = 0;
-            const animation = setInterval(() => {
+        restoreText: function (position) {
+            if (position <= this.initText.length) {
+                const start = Date.now();
                 this.text = this.initText.substring(0, position) + this.getRandomCharacters(this.initText.length - position);
-                position++;
-                if (position > this.initText.length) {
-                    clearInterval(animation);
-                }
-            }, Math.floor(1000 / this.framesPerSecond));
+                Utils.animationFrame(start, Date.now(), this.fps, this.restoreText, position + 1);
+            }
         },
 
         /**
          * Glitches the text
          * @returns {Promise<unknown>}
          */
-        glitchTextAnimation: function () {
-            return new Promise((resolve) => {
-                let frame = 0;
-                const animation = setInterval(() => {
-                    this.text = this.getRandomCharacters(this.initText.length);
+        glitchText: function () {
+            const start = Date.now();
 
-                    frame++;
-                    if (frame >= this.animationFrames) {
-                        clearInterval(animation);
-                        resolve();
-                    }
-                }, Math.floor(1000 / this.framesPerSecond));
+            return new Promise((resolve) => {
+                this.glitchTextAnimation(resolve, 0);
             });
+        },
+
+        /**
+         * Animation to glitch the text
+         * @param resolve
+         * @param scramble
+         */
+        glitchTextAnimation: function (resolve, scramble) {
+            if (scramble < this.scramble) {
+                const start = Date.now();
+                this.text = this.getRandomCharacters(this.initText.length);
+                Utils.animationFrame(start, Date.now(), this.fps, this.glitchTextAnimation, resolve, scramble + 1);
+            } else {
+                resolve();
+            }
         },
 
         /**
@@ -94,6 +111,10 @@ const TextGlitch = Vue.defineCustomElement({
             return characters;
         }
     },
+
+    /**
+     * Action when component is mounted
+     */
     mounted() {
         this.animate();
     }

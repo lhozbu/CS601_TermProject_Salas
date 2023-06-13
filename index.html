@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+
     <title>Title</title>
     <link href="css/default.css" rel="stylesheet">
 </head>
 <body>
-<site-header></site-header>
-<main class="container stretch">
-    <div class="column align-center">
-        <text-glitch init-element="h1"
-                     init-text="Welcome">
-        </text-glitch>
-        <text-glitch init-element="p"
-                     init-frames-per-second="60"
-                     init-text="My name is Luis Salas and this is my website.">
-        </text-glitch>
-        <text-glitch init-element="p"
-                     init-frames-per-second="60"
-                     init-text="Go ahead and click any of the sections to explore it and know more about me.">
-        </text-glitch>
-        <image-nav class="margin-top-10 margin-bottom-10"></image-nav>
+<particle-animation></particle-animation>
+<app-header></app-header>
+<div class="row">
+    <div class="column">
+        <text-glitch init-css="align-center" init-text="Welcome!"></text-glitch>
+        <text-glitch init-css="align-center"
+                     init-fps="60"
+                     init-text="This site is about me. Please go ahead and select one of the sections to explore."
+                     init-type="p"></text-glitch>
     </div>
-</main>
-<script src="js/lib/vue.min.js"></script>
-<script src="js/component/site-header.js"></script>
+</div>
+<image-nav></image-nav>
+<app-footer></app-footer>
+<script src="js/component/particle-animation.js" type="module"></script>
 <script src="js/component/text-glitch.js" type="module"></script>
+<script src="js/component/app-header.js" type="module"></script>
+<script src="js/component/app-footer.js" type="module"></script>
 <script src="js/component/image-nav.js" type="module"></script>
-<script src="js/page/index.js" type="module"></script>
 </body>
 </html>
