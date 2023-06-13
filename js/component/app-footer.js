@@ -1,10 +1,10 @@
-import * as Vue from "../library/vue.esm-browser.prod.js";
+import * as Vue from "../library/vue.js";
 
 /**
  * Application footer
  * @type {VueCustomElement}
  */
-const AppFooter = Vue.defineCustomElement({
+export const AppFooter = Vue.defineCustomElement({
     // language=HTML
     template: `
         <footer class="row background-primary">

@@ -1,30 +1,56 @@
+/* Column variation */
 .image-nav .column {
     height: 400pt;
     position: relative;
 }
 
+.image-nav .column.active {
+    animation-name: activation-column;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+.image-nav .column.inactive {
+    animation-name: deactivation-column;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+/* Figure */
 .image-nav figure {
     margin: 0 5pt;
     padding: 0;
     height: 100%;
     max-width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.image-nav figure>img  {
+/* Image */
+.image-nav img {
     object-fit: cover;
     height: 100%;
     max-width: 100%;
+    cursor: pointer;
 }
 
-.image-nav figure>figcaption {
-    background-color: var(--color-blue);
+.image-nav .column.active img {
+    animation-name: activation-img;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* Caption */
+.image-nav figcaption {
+    background-color: rgba(0, 113, 156, 0.4);
     color: var(--color-light) !important;
+    text-shadow: 0 0 2pt var(--color-light), 0 0 4pt var(--color-light);
 
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
+    width: 100%;
     height: 100%;
 
     writing-mode: vertical-lr;
@@ -33,5 +59,59 @@
     font-size: 1.5rem;
     color: black;
 
-    cursor: pointer;
+    cursor: zoom-in;
+}
+
+.image-nav .column.active figcaption {
+    animation-name: activation-figcaption;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    cursor: zoom-out;
+}
+
+.image-nav .column.inactive figcaption {
+    animation-name: deactivation-figcaption;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+/* Animations */
+@keyframes activation-column {
+    to {
+        flex: 1 0 25%;
+    }
+}
+
+@keyframes deactivation-column {
+    from {
+        flex: 1 0 25%;
+    }
+}
+
+@keyframes activation-figcaption {
+    to {
+        width: 2rem;
+        background-color: var(--color-blue);
+    }
+}
+
+@keyframes deactivation-figcaption {
+    from {
+        width: 2rem;
+        background-color: var(--color-blue);
+    }
+}
+
+@keyframes activation-img {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
 }

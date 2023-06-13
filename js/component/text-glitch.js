@@ -1,10 +1,10 @@
-import * as Vue from "../library/vue.esm-browser.prod.js";
+import * as Vue from "../library/vue.js";
 import * as Utils from "../library/utils.js";
 
 /**
  * Animates text like is glitching
  */
-const TextGlitch = Vue.defineCustomElement({
+export const TextGlitch = Vue.defineCustomElement({
     // language=HTML
     template: `
         <component :is="type" :class="css">{{text}}</component>

@@ -1,10 +1,10 @@
-import * as Vue from "../library/vue.esm-browser.prod.js";
+import * as Vue from "../library/vue.js";
 
 /**
  * Application header
  * @type {VueCustomElement}
  */
-const AppHeader = Vue.defineCustomElement({
+export const AppHeader = Vue.defineCustomElement({
     // language=HTML
     template: `
         <header class="row background-primary">

@@ -1,11 +1,11 @@
-import * as Vue from "../library/vue.esm-browser.prod.js";
+import * as Vue from "../library/vue.js";
 import * as Utils from "../library/utils.js";
 
 /**
  * Particle background animation
  * @type {VueCustomElement}
  */
-const ParticleAnimation = Vue.defineCustomElement({
+export const ParticleAnimation = Vue.defineCustomElement({
     // language=HTML
     template: `
         <canvas ref="canvas" :width="width" :height="height"></canvas>
@@ -27,6 +27,46 @@ const ParticleAnimation = Vue.defineCustomElement({
     props: {
         initColor: {
             default: "#000000"
+        },
+        initGenerationRate: {
+            default: 0.1
+        },
+        initDirectionChangeRate: {
+            default: 0.05
+        }
+    },
+
+    /**
+     * Behavior observers
+     */
+    watch: {
+        /**
+         * For color changes
+         * @param newValue
+         * @param oldValue
+         */
+        initColor: function (newValue, oldValue) {
+            this.color = newValue;
+            this.color = newValue;
+            this.color = newValue;
+        },
+
+        /**
+         * For direction rate changes
+         * @param newValue
+         * @param oldValue
+         */
+        initDirectionChangeRate: function (newValue, oldValue) {
+            this.directionChangeRate = newValue;
+        },
+
+        /**
+         * For generation rate changes
+         * @param newValue
+         * @param oldValue
+         */
+        initGenerationRate: function (newValue, oldValue) {
+            this.generationRate = newValue;
         }
     },
 
@@ -43,8 +83,11 @@ const ParticleAnimation = Vue.defineCustomElement({
 
             background: "#ffffff",
             opacityRate: 0.1,
-            generationRate: 0.1,
-            directionChangeRate: 0.05,
+            generationRate: this.initGenerationRate,
+            directionChangeRate: this.initDirectionChangeRate,
+
+            defaultGenerationRate: this.initGenerationRate,
+            defaultDirectionChangeRate: this.initDirectionChangeRate,
 
             minEnergy: 5,
             maxEnergy: 50,
@@ -53,27 +96,11 @@ const ParticleAnimation = Vue.defineCustomElement({
             wallCollisions: false,
             particlesCollisions: false,
 
-            particleColor: this.initColor,
-            generationColor: this.initColor,
-            collisionColor: this.initColor,
+            color: this.initColor,
+
+            defaultColor: this.initColor,
 
             elements: []
-        }
-    },
-
-    /**
-     * Behavior observers
-     */
-    watch: {
-        /**
-         * For color changes
-         * @param newValue
-         * @param oldValue
-         */
-        initColor: function (newValue, oldValue) {
-            this.particleColor = newValue;
-            this.generationColor = newValue;
-            this.collisionColor = newValue;
         }
     },
 
@@ -163,7 +190,7 @@ const ParticleAnimation = Vue.defineCustomElement({
                 // Checks if is already on limit
                 if (element.energy <= element.maxEnergy) {
                     // Draws
-                    this.context.strokeStyle = this.generationColor;
+                    this.context.strokeStyle = this.color;
                     this.context.beginPath();
                     this.context.arc(element.x, element.y, (element.maxEnergy - element.energy), 0, 2 * Math.PI);
                     this.context.stroke();
@@ -202,7 +229,7 @@ const ParticleAnimation = Vue.defineCustomElement({
 
                 // Draws the movement
                 this.context.lineTo(element.x, element.y);
-                this.context.strokeStyle = this.particleColor;
+                this.context.strokeStyle = this.color;
                 this.context.stroke();
 
                 if (Math.random() < this.directionChangeRate) {
@@ -225,7 +252,7 @@ const ParticleAnimation = Vue.defineCustomElement({
                 // Checks if is already on limit
                 if (element.releasedEnergy < element.energy) {
                     // Draws
-                    this.context.strokeStyle = this.collisionColor;
+                    this.context.strokeStyle = this.color;
                     this.context.beginPath();
                     this.context.arc(element.x, element.y, element.releasedEnergy, 0, 2 * Math.PI);
                     this.context.stroke();
