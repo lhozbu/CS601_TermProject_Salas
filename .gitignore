@@ -1,2 +1,4 @@
 # WebStorm IDE
 .idea
+*.mwb
+*.mwb.bak

@@ -10,16 +10,11 @@ export const AppHeader = Vue.defineCustomElement({
             <div class="container stretch">
                 <div class="row">
                     <div class="column">
-                        <glitch-text>
-                            <span>Luis Salas</span>
+                        <glitch-text recover-rate="5">
+                            <span>Luis Salas - CS601 - Web Application Development</span>
                         </glitch-text>
                     </div>
                     <div class="column align-right">
-                        <a href="javascript:;">
-                            <glitch-text recover-rate="2">
-                                <span>Phone: +1 (603) 824 2671</span>
-                            </glitch-text>
-                        </a> |
                         <a href="javascript:;">
                             <glitch-text>
                                 <span>Email: lhoz@bu.edu</span>

@@ -1,0 +1,80 @@
+form {
+    box-shadow: var(--box-shadow);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10pt;
+    background: #F9F7F7DE;
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+form legend {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border-bottom: 1px solid var(--color-dark);
+    margin-bottom: 10pt;
+    text-align: center;
+}
+
+form .group {
+    width: 100%;
+    display: block;
+    margin: 10pt 0;
+}
+
+form .group label {
+    display: block;
+    font-size: 1.1rem;
+}
+
+form .group label.error {
+    color: var(--color-error);
+    margin-top: 5pt;
+}
+
+form .group input, form .group textarea {
+    display: block;
+    width: 98%;
+    border: none;
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    padding: 5pt;
+}
+
+form .group input:active, form .group textarea:active, form .group input:focus, form .group textarea:focus, form .group input:focus-visible, form .group textarea:focus-visible {
+    border: 1px solid var(--color-primary);
+    outline: 1px solid var(--color-primary);
+}
+
+form .group textarea {
+    resize: none;
+}
+
+form .group button {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: 1px solid var(--color-dark);
+    padding: 10pt;
+    cursor: pointer;
+}
+
+form .group button:hover {
+    animation-name: button-hover;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+@keyframes button-hover {
+    to {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        padding: 10pt;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+    }
+}

@@ -10,7 +10,7 @@
     <link href="css/common/default.css" rel="stylesheet">
 </head>
 <body>
-<particles-animation init-background="#F9F7F7" init-color="#ff571d"></particles-animation>
+<particles-animation init-background="#F9F7F7" init-color="#A74934"></particles-animation>
 <app-header></app-header>
 
 <main class="container">
@@ -18,24 +18,22 @@
         <div class="row">
             <div class="column align-center">
                 <glitch-text>
-                    <h1>Experience</h1>
+                    <h1>Contact</h1>
                 </glitch-text>
-                <glitch-text recover-rate="2">
-                    <p class="margin-0">My work experience unveiled.</p>
+                <glitch-text recover-rate="5">
+                    <p class="margin-0">I might not check it but its something...</p>
                 </glitch-text>
             </div>
         </div>
-    </div>
-    <div class="container stretch padding-y-10">
-        <div class="row">
+        <div class="row margin-y-10">
             <div class="column">
-                <app-table src="json/app-table/experience.json"></app-table>
+                <contact-form></contact-form>
             </div>
         </div>
     </div>
 </main>
 
 <app-footer></app-footer>
-<script src="js/page/experience.js" type="module"></script>
+<script src="js/page/contact.js" type="module"></script>
 </body>
 </html>

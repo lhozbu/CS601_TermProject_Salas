@@ -4,5 +4,7 @@
     --color-primary: #3F72AF;
     --color-secondary: #DBE2EF;
 
+    --color-error: #B05A51;
+
     --box-shadow: 0 0 5pt var(--color-secondary), 1pt 1pt 5pt var(--color-primary);
 }
