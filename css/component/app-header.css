@@ -1,0 +1,11 @@
+header {
+    height: auto;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    width: 100%;
+    padding-top: 5pt;
+}
+
+header * {
+    color: var(--color-light);
+}

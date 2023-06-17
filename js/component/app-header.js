@@ -1,28 +1,40 @@
-import * as Vue from "../library/vue.js";
+import * as Vue from "../lib/vue.js";
 
 /**
- * Application header
- * @type {VueCustomElement}
+ * Displays the application header with the navigation
  */
 export const AppHeader = Vue.defineCustomElement({
     // language=HTML
     template: `
-        <header class="row background-primary">
-            <div class="column">
-                <div class="row stretch">
-                    <span class="column">Luis Salas</span>
-                    <span class="column align-right">
-                <a href="sms:+16038242671">Phone: +1 (603) 824 2671</a> |
-                <a href="mail:lhozdroid@gmail.com">Email: lhoz@bu.edu</a>
-            </span>
+        <header class="container">
+            <div class="container stretch">
+                <div class="row">
+                    <div class="column">
+                        <glitch-text>
+                            <span>Luis Salas</span>
+                        </glitch-text>
+                    </div>
+                    <div class="column align-right">
+                        <a href="javascript:;">
+                            <glitch-text recover-rate="2">
+                                <span>Phone: +1 (603) 824 2671</span>
+                            </glitch-text>
+                        </a> |
+                        <a href="javascript:;">
+                            <glitch-text>
+                                <span>Email: lhoz@bu.edu</span>
+                            </glitch-text>
+                        </a>
+                    </div>
                 </div>
+                <nav-bar></nav-bar>
             </div>
         </header>
     `,
 
     // language=CSS
     styles: [`
-        @import 'css/default.css';
+        @import "css/common/default.css";
+        @import "css/component/app-header.css";
     `]
 });
-customElements.define("app-header", AppHeader);

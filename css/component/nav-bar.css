@@ -1,0 +1,35 @@
+nav ul {
+    list-style: none;
+    margin: 10pt 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 2pt;
+}
+
+nav a {
+    width: 100pt;
+    display: inline-block;
+    text-align: center;
+    background: var(--color-light);
+    color: var(--color-dark);
+    text-decoration: none;
+    padding: 2pt;
+}
+
+nav a:hover {
+    animation-name: nav-hover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-hover {
+    to {
+        background: var(--color-dark);
+        color: var(--color-light);
+        box-shadow: 0 0 5pt var(--color-secondary);
+    }
+}

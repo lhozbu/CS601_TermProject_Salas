@@ -1,0 +1,68 @@
+.table-container {
+    box-shadow: 0 0 5pt var(--color-secondary), 1pt 1pt 5pt var(--color-primary);
+    padding: 10pt;
+    background-color: #F9F7F7CF;
+}
+
+table {
+    width: 100%;
+    vertical-align: center;
+    padding: 0.2rem 0.2rem;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+thead > tr {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+th {
+    font-size: 1.2rem;
+    padding: 10pt;
+}
+
+td {
+    padding: 10pt;
+}
+
+tbody > tr {
+    border-top: 1px solid var(--color-secondary);
+}
+
+tbody > tr:first-child {
+    border-top: none;
+}
+
+tbody > tr:hover {
+    animation-name: tr-hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+@keyframes tr-hover {
+    to {
+        background-color: var(--color-secondary);
+        box-shadow: 5pt 5pt 3pt var(--color-primary);
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
+}
+
+figure {
+    text-align: center;
+    width: auto;
+}
+
+figure img {
+    object-fit: cover;
+    max-width: 100pt;
+}
+
+figure figcaption {
+    overflow-wrap: break-word;
+    font-size: 0.6rem;
+}

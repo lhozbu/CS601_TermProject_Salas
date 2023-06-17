@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Share Tech Mono';
+    src: url('../../font/ShareTechMono-Regular.eot');
+    src: url('../../font/ShareTechMono-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../font/ShareTechMono-Regular.woff2') format('woff2'),
+    url('../../font/ShareTechMono-Regular.woff') format('woff'),
+    url('../../font/ShareTechMono-Regular.ttf') format('truetype'),
+    url('../../font/ShareTechMono-Regular.svg#ShareTechMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

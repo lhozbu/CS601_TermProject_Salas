@@ -1,0 +1,51 @@
+{
+  "headers": [
+    "Education Level",
+    "Academic Center",
+    "Start",
+    "End",
+    "Institution Logo"
+  ],
+  "rows": [
+    [
+      "Master of Science in Computer Information Systems with emphasis in Web Development",
+      "Boston University",
+      2022,
+      2023,
+      {
+        "img": "img/component/app-table/education/boston-university.png",
+        "caption": "Boston University. (2020, June 23). File:Boston University wordmark.svg. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Boston_University_wordmark.svg"
+      }
+    ],
+    [
+      "Bachelor of Science in Computer Science",
+      "Costa Rica Institute of Technology",
+      2004,
+      2009,
+      {
+        "img": "img/component/app-table/education/tec.png",
+        "caption": "Roqz. (2020, December 13). File:Firma tec.svg. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Firma_TEC.svg"
+      }
+    ],
+    [
+      "Secondary Education",
+      "Los Angeles High School",
+      1999,
+      2003,
+      {
+        "img": "img/component/app-table/education/dominique-order.png",
+        "caption": "Cybhernan. (2023, May 8). Dominican Order. Wikipedia. https://en.wikipedia.org/wiki/Dominican_Order#/media/File:EscOrdendePredicadores2Wikipedia.png"
+      }
+    ],
+    [
+      "Primary Education",
+      "Saint Catherine of Sienna School",
+      1993,
+      1998,
+      {
+        "img": "img/component/app-table/education/dominique-order.png",
+        "caption": "Cybhernan. (2023, May 8). Dominican Order. Wikipedia. https://en.wikipedia.org/wiki/Dominican_Order#/media/File:EscOrdendePredicadores2Wikipedia.png"
+      }
+    ]
+  ]
+}

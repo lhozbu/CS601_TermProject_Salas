@@ -1,43 +1,37 @@
-import * as Vue from "../library/vue.js";
+import * as Vue from "../lib/vue.js";
 
 /**
- * Image navigation component
+ * Displays the image navigation
  */
 export const ImageNav = Vue.defineCustomElement({
     // language=HTML
     template: `
-        <div class="row stretch margin-y-20 image-nav">
-            <div ref="column" class="column" v-for="(item, index) in items" :data-color="item.color"
-                 :data-generation="item.generation" :data-direction="item.direction">
+        <div class="row">
+            <div class="column" v-for="element in elements" ref="element" :data-color="element.color">
                 <figure>
-                    <img :src="item.image">
-                    <figcaption @click="activate($event)">{{item.text}}</figcaption>
+                    <a :href="element.href">
+                        <img :src="element.image">
+                    </a>
+                    <figcaption @click="activate($event)">{{element.text}}</figcaption>
                 </figure>
             </div>
         </div>
     `,
 
     // language=CSS
-    styles: [
-            `
-            @import 'css/default.css';
-            @import 'css/image-nav.css';
-        `
-    ],
+    styles: [`
+        @import "css/common/default.css";
+        @import "css/component/image-nav.css";
+    `],
 
-    /**
-     * Data of the component
-     */
+    /* Component data */
     data() {
         return {
-            items: [],
-            active: null
-        };
+            elements: []
+        }
     },
 
-    /**
-     * Component methods
-     */
+    /* Component methods */
     methods: {
         /**
          * Activates a navigation element
@@ -53,15 +47,18 @@ export const ImageNav = Vue.defineCustomElement({
                 triggeredColumn.classList.replace("active", "inactive");
                 setTimeout(() => triggeredColumn.classList.remove("inactive"), 500);
 
-                // Restores the particles
-                this.restoreParticles();
+                // // Restores the particles
+                const particlesAnimation = document.querySelector("particles-animation")._instance;
+                particlesAnimation.data.color = particlesAnimation.props.initColor;
+                particlesAnimation.data.generationRate = particlesAnimation.props.initGenerationRate;
+                particlesAnimation.data.directionRate = particlesAnimation.props.initDirectionRate;
             } else {
                 // Obtains the columns and turns them off if needed
-                const columns = this.$refs.column;
-                columns.forEach((column) => {
-                    if (column.classList.contains("active")) {
-                        column.classList.replace("active", "inactive");
-                        setTimeout(() => column.classList.remove("inactive"), 500);
+                const elements = this.$refs.element;
+                elements.forEach((element) => {
+                    if (element.classList.contains("active")) {
+                        element.classList.replace("active", "inactive");
+                        setTimeout(() => element.classList.remove("inactive"), 500);
                     }
                 });
 
@@ -69,47 +66,20 @@ export const ImageNav = Vue.defineCustomElement({
                 triggeredColumn.classList.add("active");
 
                 // Alters the particles
-                const color = triggeredColumn.dataset.color;
-                const generation = triggeredColumn.dataset.generation;
-                const direction = triggeredColumn.dataset.direction;
-                this.alterParticles(color, generation, direction);
+                const particlesAnimation = document.querySelector("particles-animation")._instance;
+                particlesAnimation.data.color = triggeredColumn.dataset.color;
+                particlesAnimation.data.generationRate = 0.75;
+                particlesAnimation.data.directionRate = 0.25;
             }
-        },
-
-        /**
-         * Alters the particles behavior
-         * @param color
-         * @param generation
-         * @param direction
-         */
-        alterParticles: function (color, generation, direction) {
-            const particleAnimation = document.querySelector("particle-animation");
-            particleAnimation._instance.data.color = color;
-            particleAnimation._instance.data.generationRate = generation;
-            particleAnimation._instance.data.directionChangeRate = direction;
-        },
-
-        /**
-         * Restores the particles behavior
-         */
-        restoreParticles: function () {
-            const particleAnimation = document.querySelector("particle-animation");
-            particleAnimation._instance.data.color = particleAnimation._instance.data.defaultColor;
-            particleAnimation._instance.data.generationRate = particleAnimation._instance.data.defaultGenerationRate;
-            particleAnimation._instance.data.directionChangeRate = particleAnimation._instance.data.defaultDirectionChangeRate;
         }
     },
 
-    /**
-     * Called before the UI is mounted
-     */
-    beforeCreate() {
+    /* Before is ready */
+    beforeMount() {
         fetch("json/image-nav.json", {
             method: "get",
-            accept: "applicaiton/json"
-        }) //
-            .then((response) => response.json()) //
-            .then((json) => this.items = json);
+            accept: "application/json"
+        }).then((response) => response.json()) //
+            .then((json) => this.elements = json);
     }
 });
-customElements.define("image-nav", ImageNav);

@@ -1,0 +1,10 @@
+{
+  "title": "Young Adult",
+  "paragraphs" : [
+    "In the year 2009, when I was about to graduate from the University, I acquired a weird bacterial decease called Brucellosis. After hundreds of visits to doctors and several tests, there wasn't much progress in the diagnosis. I even was told that I was faking, that I had probably a mental breakdown. Unfortunately, my sister, the MD, was outside the country with little to no communication.",
+    "I took the decision to take the matters in my hand. So based on the results of the tests that I had I started to read medical books and learn about how to diagnose myself, I had literature at hand anyways. I found in one text that there is a test called the antigen test. It requires blood from cow or sheep to find specific types of bacteria, especially those bacteria that affect different animals but all humans. I found that most laboratories on Costa Rica used cow blood and only one used sheep blood. I repeated the test in the one that used sheep blood and it came back positive for Brucellosis. With the diagnosis ready a MD doctor with speciality on Infectious Diseases was able to treat me."
+  ],
+  "img": "img/component/about-article/figure/brucellosis.jpg",
+  "caption" : "Brucellosis. European Centre for Disease Prevention and Control. (2010, July 15). https://www.ecdc.europa.eu/en/brucellosis",
+  "background": "img/component/about-article/background/bacteria.jpg"
+}

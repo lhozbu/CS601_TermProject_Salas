@@ -1,0 +1,100 @@
+@import "share-tech-mono.css";
+@import "palette.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Share Tech Mono";
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+body * {
+    font-family: "Share Tech Mono";
+    color: var(--color-dark);
+}
+
+app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+app-footer {
+    margin-top: auto;
+}
+
+/* Location */
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.container.stretch {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.column {
+    flex: 1 0 0%;
+}
+
+/* Alignments */
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+/* Paddings */
+.padding-0 {
+    padding: 0;
+}
+
+.padding-10 {
+    padding: 10pt;
+}
+
+.padding-y-10 {
+    padding: 10pt 0;
+}
+
+/* Margins */
+.margin-0 {
+    margin: 0;
+}
+
+.margin-10 {
+    margin: 10pt;
+}
+
+/* Lists */
+ul.list-plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

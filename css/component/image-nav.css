@@ -1,23 +1,23 @@
 /* Column variation */
-.image-nav .column {
+.column {
     height: 400pt;
     position: relative;
 }
 
-.image-nav .column.active {
+.column.active {
     animation-name: activation-column;
     animation-fill-mode: forwards;
     animation-duration: 500ms;
 }
 
-.image-nav .column.inactive {
+.column.inactive {
     animation-name: deactivation-column;
     animation-fill-mode: forwards;
     animation-duration: 500ms;
 }
 
 /* Figure */
-.image-nav figure {
+figure {
     margin: 0 5pt;
     padding: 0;
     height: 100%;
@@ -27,21 +27,21 @@
 }
 
 /* Image */
-.image-nav img {
+img {
     object-fit: cover;
     height: 100%;
     max-width: 100%;
     cursor: pointer;
 }
 
-.image-nav .column.active img {
+.column.active img {
     animation-name: activation-img;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
 /* Caption */
-.image-nav figcaption {
+figcaption {
     background-color: rgba(0, 113, 156, 0.4);
     color: var(--color-light) !important;
     text-shadow: 0 0 2pt var(--color-light), 0 0 4pt var(--color-light);
@@ -62,14 +62,14 @@
     cursor: zoom-in;
 }
 
-.image-nav .column.active figcaption {
+.column.active figcaption {
     animation-name: activation-figcaption;
     animation-fill-mode: forwards;
     animation-duration: 500ms;
     cursor: zoom-out;
 }
 
-.image-nav .column.inactive figcaption {
+.column.inactive figcaption {
     animation-name: deactivation-figcaption;
     animation-fill-mode: forwards;
     animation-duration: 500ms;
@@ -91,14 +91,14 @@
 @keyframes activation-figcaption {
     to {
         width: 2rem;
-        background-color: var(--color-blue);
+        background-color: var(--color-dark);
     }
 }
 
 @keyframes deactivation-figcaption {
     from {
         width: 2rem;
-        background-color: var(--color-blue);
+        background-color: var(--color-dark);
     }
 }
 

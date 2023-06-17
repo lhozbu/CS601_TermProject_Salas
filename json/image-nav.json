@@ -1,58 +1,46 @@
 [
   {
-    "image": "img/image-nav/about.jpg",
+    "image": "img/component/image-nav/about.jpg",
     "text": "About",
     "color": "#4894C5",
-    "generation": 0.5,
-    "direction": 0.25,
-    "href": "https://www.google.com"
+    "href": "about.html"
   },
   {
-    "image": "img/image-nav/education.jpg",
+    "image": "img/component/image-nav/education.jpg",
     "text": "Education",
     "color": "#ff4a4a",
-    "generation": 0.5,
-    "direction": 0.25,
-    "href": "https://www.google.com"
+    "href": "education.html"
   },
   {
-    "image": "img/image-nav/experience.jpg",
+    "image": "img/component/image-nav/experience.jpg",
     "text": "Experience",
     "color": "#ff571d",
-    "generation": 0.5,
-    "direction": 0.25,
-    "href": "https://www.google.com"
+    "href": "experience.html"
   },
   {
-    "image": "img/image-nav/family.jpg",
+    "image": "img/component/image-nav/family.jpg",
     "text": "Family",
-    "color": "#4aff41",
-    "generation": 0.5,
-    "direction": 0.25,
-    "href": "https://www.google.com"
+    "color": "#00c600",
+    "href": "family.html"
   },
   {
-    "image": "img/image-nav/videogames.jpg",
+    "image": "img/component/image-nav/videogames.jpg",
     "text": "Videogames",
     "color": "#ea69ff",
     "generation": 0.5,
     "direction": 0.25,
-    "href": "https://www.google.com"
+    "href": "videogames.html"
   },
   {
-    "image": "img/image-nav/cars.jpg",
+    "image": "img/component/image-nav/cars.jpg",
     "text": "Cars",
-    "color": "#fafa00",
-    "generation": 0.5,
-    "direction": 0.25,
-    "href": "https://www.google.com"
+    "color": "#f9ed00",
+    "href": "cars.html"
   },
   {
-    "image": "img/image-nav/contact.jpg",
+    "image": "img/component/image-nav/contact.jpg",
     "text": "Contact",
     "color": "#A74934",
-    "generation": 0.5,
-    "direction": 0.25,
-    "href": "https://www.google.com"
+    "href": "contact.html"
   }
 ]

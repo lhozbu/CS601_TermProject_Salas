@@ -1,0 +1,61 @@
+{
+  "headers": [
+    "Position",
+    "Company",
+    "From",
+    "To",
+    "Company Logo"
+  ],
+  "rows": [
+    [
+      "Principal Software Engineer",
+      "Vicor",
+      2015,
+      "Today",
+      {
+        "img": "img/component/app-table/experience/vicor.png",
+        "caption": "Vicorpower. (n.d.). Vicorpower. Modular Solutions For Your Power System. https://www.vicorpower.com/"
+      }
+    ],
+    [
+      "Senior Software Engineer",
+      "Epic Software Development",
+      2014,
+      2015,
+      {
+        "img": "img/component/app-table/experience/epic.png",
+        "caption": "Epic Software Dev. (2023, March 6). Epic Software Dev. EPIC Software Development. https://www.epicsoftwaredev.com/"
+      }
+    ],
+    [
+      "Senior Software Engineer",
+      "Chesapeake System Solutions, Inc.",
+      2014,
+      2014,
+      {
+        "img": "img/component/app-table/experience/chesapeake.png",
+        "caption": "Trintech. (n.d.). Trintech. https://www.trintech.com/"
+      }
+    ],
+    [
+      "Senior Software Engineer",
+      "Prodigious Latin America",
+      2012,
+      2014,
+      {
+        "img": "img/component/app-table/experience/prodigious.png",
+        "caption": "Prodigious. (n.d.). Prodigious. https://www.prodigious.com/"
+      }
+    ],
+    [
+      "Software Engineer II",
+      "Avantica Technologies",
+      2012,
+      2014,
+      {
+        "img": "img/component/app-table/experience/avantica.png",
+        "caption": "Encora. (n.d.). Encora. https://www.encora.com/"
+      }
+    ]
+  ]
+}
