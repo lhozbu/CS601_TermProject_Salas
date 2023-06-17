@@ -42,3 +42,26 @@ details p {
     justify-items: auto;
     padding: 0 20pt;
 }
+
+details ul {
+    margin-bottom: 20pt !important;
+    margin-left: 20pt !important;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    details {
+        width: 98%;
+    }
+
+    figure {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    details ul {
+        text-align: center;
+    }
+}

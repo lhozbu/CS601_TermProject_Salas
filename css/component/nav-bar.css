@@ -7,7 +7,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 0 2pt;
+    margin: 2pt 2pt;
 }
 
 nav a {
@@ -18,6 +18,16 @@ nav a {
     color: var(--color-dark);
     text-decoration: none;
     padding: 2pt;
+}
+
+@media (max-width: 800px) {
+    nav li {
+        display: block;
+    }
+
+    nav a {
+        width: 98%;
+    }
 }
 
 nav a:hover {

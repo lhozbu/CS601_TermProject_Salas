@@ -26,6 +26,17 @@ figure {
     overflow: hidden;
 }
 
+@media (max-width: 1280px) {
+    .column {
+        flex: 1 0 0%;
+    }
+
+    figure {
+        margin: 0;
+    }
+}
+
+
 /* Image */
 img {
     object-fit: cover;

@@ -6,26 +6,26 @@ import * as Vue from "../lib/vue.js";
 export const AppTable = Vue.defineCustomElement({
     // language=HTML
     template: `
-       <div class="table-container">
-           <table>
-               <thead>
-               <tr>
-                   <th v-for="header in configuration.headers">{{header}}</th>
-               </tr>
-               </thead>
-               <tbody>
-               <tr v-for="row in configuration.rows">
-                   <td v-for="cell in row" :class="cell.constructor === {}.constructor ? 'align-center' : ''">
-                       <span v-if="cell.constructor !== {}.constructor">{{cell}}</span>
-                       <figure v-else>
-                           <img :src="cell.img">
-                           <figcaption>{{cell.caption}}</figcaption>
-                       </figure>
-                   </td>
-               </tr>
-               </tbody>
-           </table>
-       </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th v-for="(header, index) in configuration.headers" :class="configuration.classes[index]">{{header}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="row in configuration.rows">
+                    <td v-for="(cell, index) in row" :class="(cell.constructor === {}.constructor ? 'align-center ' : ' ') + configuration.classes[index]">
+                        <span v-if="cell.constructor !== {}.constructor">{{cell}}</span>
+                        <figure v-else>
+                            <img :src="cell.img">
+                            <figcaption>{{cell.caption}}</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     `,
 
     // language=CSS

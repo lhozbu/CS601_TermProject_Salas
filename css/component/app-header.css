@@ -13,3 +13,10 @@ header * {
 .fixed {
     position: fixed;
 }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    header .column {
+        text-align: center !important;
+    }
+}

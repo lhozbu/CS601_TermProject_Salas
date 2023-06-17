@@ -15,7 +15,7 @@ export const AppHeader = Vue.defineCustomElement({
                         </glitch-text>
                     </div>
                     <div class="column align-right">
-                        <a href="javascript:;">
+                        <a href="mailto:lhoz@bu.edu">
                             <glitch-text>
                                 <span>Email: lhoz@bu.edu</span>
                             </glitch-text>
@@ -57,10 +57,12 @@ export const AppHeader = Vue.defineCustomElement({
         const header = this.$refs.header;
         const headerHeight = header.offsetHeight;
         window.addEventListener("scroll", () => {
-            if ((window.pageYOffset + headerHeight) > headerHeight) {
-                this.fix();
-            } else {
-                this.unfix();
+            if ((window.innerWidth > 800)) {
+                if ((window.pageYOffset + headerHeight) > headerHeight) {
+                    this.fix();
+                } else {
+                    this.unfix();
+                }
             }
         });
     }

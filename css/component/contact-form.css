@@ -78,3 +78,10 @@ form .group button:hover {
         box-shadow: var(--box-shadow);
     }
 }
+
+/* Responsive */
+@media (max-width: 800px) {
+    form {
+        width: 90%;
+    }
+}

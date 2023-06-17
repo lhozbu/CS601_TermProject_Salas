@@ -66,3 +66,10 @@ figure figcaption {
     overflow-wrap: break-word;
     font-size: 0.6rem;
 }
+
+/* Responsive */
+@media (max-width: 800px) {
+    .hidden-sm {
+        display: none;
+    }
+}

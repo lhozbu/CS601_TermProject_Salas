@@ -35,12 +35,13 @@ figure {
     margin-top: 0;
     margin-left: 0;
     margin-right: 15pt;
+    width: 35%;
 }
 
 figure img {
     object-fit: cover;
-    width: 170pt;
-    height: 100pt;
+    width: 100%;
+    height: auto;
 }
 
 figure figcaption {
@@ -52,4 +53,15 @@ figure figcaption {
 p {
     text-align: justify;
     text-justify: auto;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    figure {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%
+    }
 }

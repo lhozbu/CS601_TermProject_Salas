@@ -111,3 +111,19 @@ ul.list-plain {
 .quote > figcaption {
     font-style: italic;
 }
+
+/* Video */
+video {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container.stretch {
+        width: 95%;
+    }
+
+    .column {
+        flex: 1 0 auto;
+    }
+}

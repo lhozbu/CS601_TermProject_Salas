@@ -57,3 +57,11 @@
         transform: scale3d(1, 1, 1);
     }
 }
+
+/* Responsive */
+@media (max-width: 800px){
+    .modal > figure {
+        width: 90%;
+        height: 75%;
+    }
+}
