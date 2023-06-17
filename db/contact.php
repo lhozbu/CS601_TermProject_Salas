@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     header('Content-type: application/json');
 
     // Connection information
-    $servername = 'localhost';
+    $servername = '208.82.114.162';
     $username = 'lhozonli_user';
     $password = 'pzS`<<8a5W,4Ln8N';
     $dbname = 'lhozonli_lhoz';
