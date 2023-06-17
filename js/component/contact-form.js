@@ -25,6 +25,7 @@ export const ContactForm = Vue.defineCustomElement({
                     <label class="error" v-for="error in message.errors">{{error}}</label>
                 </div>
                 <div class="group">
+                    <label class="margin-y-10" ref="results">{{results}}</label>
                     <button type="submit">Send</button>
                 </div>
             </fieldset>
@@ -42,6 +43,7 @@ export const ContactForm = Vue.defineCustomElement({
     /* Component data */
     data() {
         return {
+            results: "",
             name: {
                 value: "",
                 validations: [
@@ -212,6 +214,26 @@ export const ContactForm = Vue.defineCustomElement({
                 particlesAnimation.data.color = particlesAnimation.props.initColor;
                 particlesAnimation.data.generationRate = particlesAnimation.props.initGenerationRate;
                 particlesAnimation.data.directionRate = particlesAnimation.props.initDirectionRate;
+
+                // Sends the information
+                fetch("db/contact.php", {
+                    method: "post",
+                    accept: "application/json",
+                    body: JSON.stringify({
+                        "name": this.name.value,
+                        "email": this.email.value,
+                        "message": this.message.value
+                    })
+                }).then((response) => {
+                    if (response.ok) {
+                        this.results = "Message received successfully!";
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 3000);
+                    } else {
+                        this.results = "An error occurred while sending the message! Please try again later.";
+                    }
+                });
             }
         });
     }
