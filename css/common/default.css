@@ -101,3 +101,13 @@ ul.list-plain {
     margin: 0;
     padding: 0;
 }
+
+/* Quote */
+.quote > blockquote {
+    font-weight: bolder;
+    margin: 0;
+}
+
+.quote > figcaption {
+    font-style: italic;
+}
