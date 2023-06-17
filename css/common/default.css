@@ -5,11 +5,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Share Tech Mono";
-    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: var(--color-light);
     color: var(--color-dark);
+    height: 100vh;
 }
 
 body * {
@@ -18,13 +18,12 @@ body * {
 }
 
 app-header {
-    position: sticky;
-    top: 0;
     z-index: 1;
 }
 
 app-footer {
     margin-top: auto;
+    flex-shrink: 0;
 }
 
 /* Location */

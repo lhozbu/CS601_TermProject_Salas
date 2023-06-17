@@ -1,0 +1,53 @@
+.gallery-container {
+    text-align: center;
+}
+
+.gallery-container figure {
+    width: 200pt;
+    height: 200pt;
+    overflow: hidden;
+    padding: 10pt;
+    box-shadow: 0 0 5pt var(--color-secondary), 1pt 1pt 5pt var(--color-primary);
+    display: inline-block;
+    margin: 10pt;
+    background-color: #F9F7F7A6;
+}
+
+.gallery-container div {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+.gallery-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+}
+
+.gallery-container img:hover {
+    animation-name: hover-img;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.gallery-container figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5pt;
+}
+
+@keyframes hover-img {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}

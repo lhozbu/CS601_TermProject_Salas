@@ -9,3 +9,7 @@ header {
 header * {
     color: var(--color-light);
 }
+
+.fixed {
+    position: fixed;
+}
