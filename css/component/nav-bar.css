@@ -30,6 +30,6 @@ nav a:hover {
     to {
         background: var(--color-dark);
         color: var(--color-light);
-        box-shadow: 0 0 5pt var(--color-secondary);
+        box-shadow: var(--box-shadow);
     }
 }

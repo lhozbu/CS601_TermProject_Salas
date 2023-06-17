@@ -1,5 +1,5 @@
 .table-container {
-    box-shadow: 0 0 5pt var(--color-secondary), 1pt 1pt 5pt var(--color-primary);
+    box-shadow: var(--box-shadow);
     padding: 10pt;
     background-color: #F9F7F7CF;
 }
@@ -47,7 +47,7 @@ tbody > tr:hover {
 @keyframes tr-hover {
     to {
         background-color: var(--color-secondary);
-        box-shadow: 5pt 5pt 3pt var(--color-primary);
+        box-shadow: var(--box-shadow);
         transform: scale3d(1.01, 1.01, 1.01);
     }
 }

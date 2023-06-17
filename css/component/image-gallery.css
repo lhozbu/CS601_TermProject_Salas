@@ -7,7 +7,7 @@
     height: 200pt;
     overflow: hidden;
     padding: 10pt;
-    box-shadow: 0 0 5pt var(--color-secondary), 1pt 1pt 5pt var(--color-primary);
+    box-shadow: var(--box-shadow);
     display: inline-block;
     margin: 10pt;
     background-color: #F9F7F7A6;

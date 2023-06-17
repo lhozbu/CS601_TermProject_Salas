@@ -1,0 +1,148 @@
+[
+  {
+    "title": "NES",
+    "img": "img/component/gaming-consoles/nes.png",
+    "caption": "Acquired when I was 5 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "NES stands for Nintendo Entertainment System. The Nintendo company out of nowhere took the chance in the digital entertainment market after being many years into Hanafuda Cards. In 1985, one year before I was born, the NES arrived to United States.  In Japan it was called FAMICON, which stands for Family Computer.",
+    "games": [
+      "Super Mario 1",
+      "Super Mario 3",
+      "Duck Hunt",
+      "Blaster Master",
+      "Metroid",
+      "Dr. Mario",
+      "Excite Bike"
+    ]
+  },
+  {
+    "title": "Sega Genesis",
+    "img": "img/component/gaming-consoles/sega-genesis.png",
+    "caption": "Acquired when I was 7 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "The Sega Genesis was the response from Sega to the creation of the Super Nintendo.  It was called the Mega Drive outside the United States. It was release in the year of 1989.",
+    "games": [
+      "Sonic the Hedgehog 1",
+      "Sonic the Hedgehog 2",
+      "Sonic the Hedgehog 3",
+      "NBA Jam Tournament Edition",
+      "Mortal Kombat II",
+      "Mortal Kombat III",
+      "Streets of Rage 2",
+      "NCAA Football"
+    ]
+  },
+  {
+    "title": "Sony PlayStation 1",
+    "img": "img/component/gaming-consoles/playstation-1.png",
+    "caption": "Acquired when I was 10 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "Also known as the PSOne, it saw the light in United States in the year of 1995. An investigation done between Nintendo and Sony produced a prototype named the Nintendo Play Station, idea that Nintendo abandoned to create the Nintendo 64.  Sony took the patents and ideas and create the PlayStation 1.",
+    "games": [
+      "Crash Bandicoot",
+      "Twisted Metal",
+      "Mortal Kombat 4",
+      "Tony Hawk Pro Skater 1",
+      "Tony Hawk Pro Skater 2",
+      "Gran Turismo 1",
+      "Gran Turismo 2",
+      "Final Fantasy VII"
+    ]
+  },
+  {
+    "title": "Nintendo 64",
+    "img": "img/component/gaming-consoles/nintendo-64.png",
+    "caption": "Acquired when I was 12 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "The Nintendo 64 is the successor of the Super Nintendo.  Was released in the year 1996.  It was the first console to feature a 64-bit CPU. It was the direct competitor of the Sony PlayStation 1.",
+    "games": [
+      "Mario 64",
+      "Zelda: Ocarina of Time",
+      "Zelda: Majora's Mask",
+      "Pokemon Stadium",
+      "Donkey Kong 64",
+      "Conker's Bad Fur Day",
+      "Paper Mario",
+      "Banjo-Kazooie"
+    ]
+  },
+  {
+    "title": "Sega Dreamcast",
+    "img": "img/component/gaming-consoles/sega-dreamcast.png",
+    "caption": "Acquired when I was 13 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "The Dreamcast was released in 1999 in the United States.  It was the competitor of the Sony PlayStation 2 and the Nintendo Game Cube. It is considered one of the best consoles of all time, despite having a very short lifespan and being a financial failure for Sega Entertainment company.",
+    "games": [
+      "Marvel vs Capcom 2",
+      "Soulcalibur 2",
+      "Sonic Adventures",
+      "Shenmue",
+      "Speed Devils",
+      "Power Stone",
+      "Crazy Taxi"
+    ]
+  },
+  {
+    "title": "Sony PlayStation 3",
+    "img": "img/component/gaming-consoles/playstation-3.png",
+    "caption": "Acquired when I was 17 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "The successor of the PlayStation 2, it was the first console to utilize a Blu-ray disc as a storage medium. It was the first console to integrate social gaming services for Sony.  It was released in 2006 and is still considered one of the best consoles ever made.",
+    "games": [
+      "Grand Theft Auto IV",
+      "Fallout 3",
+      "God of War III",
+      "Call of Duty: Modern Warfare",
+      "Bioshock",
+      "Infamous"
+    ]
+  },
+  {
+    "title": "Nintendo WiiU",
+    "img": "img/component/gaming-consoles/nintendo-wiiu.png",
+    "caption": "Acquired when I was 26 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "The successor of the widely acclaimed Nintendo Wii. It was released in 2012 and the market acceptance was a complete failure. Due the similarity in the name to its predecessor, the buyers didn't know if the console was an addon to the Wii. Although a complete market failure for Nintendo, leaving the company in the brink of collapsing, it is considered one of the best first-party games console of all Nintendo creations.",
+    "games": [
+      "Darksiders",
+      "Paper Mario: Thousand Year Door",
+      "Zelda: Breath of the Wild",
+      "Super Mario 3d World",
+      "Mario Kart 8",
+      "Donkey Kong: Tropical Freeze",
+      "Star Fox Zero"
+    ]
+  },
+  {
+    "title": "Nintendo Switch",
+    "img": "img/component/gaming-consoles/nintendo-switch.png",
+    "caption": "Acquired when I was 35 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "Is a hybrid console in the sense of being portable and docked at the same time, released in 2017 by Nintendo. It became a total market success and put Nintendo back in the map and even on top of its competitors. It is said that the Nintendo Wii U was supposed to be like the Nintendo Switch but technology and monetary limitations didn't allow the company to release the console in early 2012.",
+    "games": [
+      "Super Mario Odyssey",
+      "Zelda: Tears of the Kingdom",
+      "Luigi's Mansion 3",
+      "Pokemon",
+      "Hades",
+      "Metroid Prime Remastered",
+      "Metroid Dread"
+    ]
+  },
+  {
+    "title": "Sony PlayStation 5",
+    "img": "img/component/gaming-consoles/playstation-5.png",
+    "caption": "Acquired when I was 36 years old.",
+    "cite": "Amazon. (2022, October 18). Images and videos - Amazon. https://press.aboutamazon.com/images-and-videos",
+    "description": "Is a home only video games console, not portable like the Switch. Was released into the market in the year 2019 and since then its been having problems of low stock due the chip production issues that was triggered around the same time that COVID hit the world. It features a custom 8-core processor, with a GPU that peaks at 10.3 FLOPS.",
+    "games": [
+      "Final Fantasy XVI",
+      "God of War",
+      "Gran Turismo 7",
+      "Elden Ring",
+      "Mortal Kombat 1",
+      "Street Fighter 6",
+      "Horizon: Zero Dawn"
+    ]
+  }
+]

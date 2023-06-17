@@ -91,6 +91,10 @@ app-footer {
     margin: 10pt;
 }
 
+.margin-y-10 {
+    margin: 10pt 0;
+}
+
 /* Lists */
 ul.list-plain {
     list-style: none;
