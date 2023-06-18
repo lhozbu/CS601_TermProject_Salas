@@ -27,8 +27,6 @@
     "image": "img/component/image-nav/videogames.jpg",
     "text": "Videogames",
     "color": "#ea69ff",
-    "generation": 0.5,
-    "direction": 0.25,
     "href": "videogames.html"
   },
   {
