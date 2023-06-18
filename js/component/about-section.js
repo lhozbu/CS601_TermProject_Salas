@@ -14,7 +14,7 @@ export const AboutSection = Vue.defineCustomElement({
                         <section>
                             <h2>{{section.title}}</h2>
                             <figure>
-                                <img :src="section.img">
+                                <img :src="section.img" :alt="section.title">
                                 <figcaption>{{section.caption}}</figcaption>
                             </figure>
                             <p v-for="paragraph in section.paragraphs">{{paragraph}}</p>

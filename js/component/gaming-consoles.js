@@ -12,7 +12,7 @@ export const GamingConsoles = Vue.defineCustomElement({
                 <div class="row">
                     <div class="column">
                         <figure>
-                            <img :src="console.img">
+                            <img :src="console.img" :alt="console.title">
                             <figcaption>
                                 {{console.caption}}
                                 <cite>{{console.cite}}</cite>

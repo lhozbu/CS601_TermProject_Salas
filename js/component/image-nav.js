@@ -10,7 +10,7 @@ export const ImageNav = Vue.defineCustomElement({
             <div class="column" v-for="element in elements" ref="element" :data-color="element.color">
                 <figure>
                     <a :href="element.href">
-                        <img :src="element.image">
+                        <img :src="element.image" alt="Navigation Image">
                     </a>
                     <figcaption @click="activate($event)">{{element.text}}</figcaption>
                 </figure>

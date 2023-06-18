@@ -18,7 +18,7 @@ export const AppTable = Vue.defineCustomElement({
                     <td v-for="(cell, index) in row" :class="(cell.constructor === {}.constructor ? 'align-center ' : ' ') + configuration.classes[index]">
                         <span v-if="cell.constructor !== {}.constructor">{{cell}}</span>
                         <figure v-else>
-                            <img :src="cell.img">
+                            <img :src="cell.img" :alt="cell.caption">
                             <figcaption>{{cell.caption}}</figcaption>
                         </figure>
                     </td>

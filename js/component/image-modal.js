@@ -8,7 +8,7 @@ export const ImageModal = Vue.defineCustomElement({
     template: `
         <div class="modal">
             <figure>
-                <img :src="src">
+                <img :src="src" :alt="caption">
                 <figcaption>{{caption}}</figcaption>
             </figure>
         </div>

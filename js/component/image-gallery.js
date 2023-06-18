@@ -9,7 +9,7 @@ export const ImageGallery = Vue.defineCustomElement({
         <div class="gallery-container">
             <figure v-for="image in images">
                 <div>
-                    <img :src="image.src" @click="openModal($event)">
+                    <img :src="image.src" :alt="image.caption" @click="openModal($event)">
                 </div>
                 <figcaption>{{image.caption}}</figcaption>
             </figure>
